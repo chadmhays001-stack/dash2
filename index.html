@@ -1,0 +1,248 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellie Assistant — Operational Executive Dashboard</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --border-color: #334155;
+            --accent-color: #38bdf8;
+            --accent-green: #22c55e;
+            --accent-amber: #f59e0b;
+            --accent-red: #ef4444;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 20px;
+            line-height: 1.6;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        header h1 {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        header .meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: right;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card p, .card li {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+        .card strong {
+            color: var(--text-main);
+        }
+        ul {
+            list-style-type: none;
+        }
+        ul li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 8px;
+        }
+        ul li::before {
+            content: "▪";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+        .badge {
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .badge-green { background-color: rgba(34, 197, 94, 0.2); color: var(--accent-green); border: 1px solid var(--accent-green); }
+        .badge-amber { background-color: rgba(245, 158, 11, 0.2); color: var(--accent-amber); border: 1px solid var(--accent-amber); }
+        .badge-red { background-color: rgba(239, 68, 68, 0.2); color: var(--accent-red); border: 1px solid var(--accent-red); }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 0.85rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        .footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🤖 Ellie Assistant Operational Dashboard</h1>
+        <div class="meta">
+            <div><strong>Operator:</strong> Jack Hays</div>
+            <div><strong>Date:</strong> September 22, 2026[cite: 1]</div>
+        </div>
+    </header>
+
+    <div class="grid-container">
+        <!-- Card 1: To-Do List -->
+        <div class="card">
+            <h2>1. To-Do List & Operational Status <span class="badge badge-amber">Active</span></h2>
+            <ul>
+                <li><strong>VA Specialist Callback & Reimbursement:</strong> FOIA tracking #20-10206 and C-File logged in queue; adjudicator actively overseeing file[cite: 1]. Wakeman appointment coordinates via Mom's Voice[cite: 1].</li>
+                <li><strong>Binance Password Reset:</strong> Credential reset required prior to investment mapping[cite: 1]. Keep cash floor locked; do not fund new positions[cite: 1]. ($2.02 posted Sep 10[cite: 1]).</li>
+                <li><strong>Attorney Contacts & Legal Schedule:</strong> Banks & Brower $5,000 retainer successfully posted Sep 8, 2026[cite: 1]. Coordinate via Clio or Kendra Moore[cite: 1].</li>
+                <li><strong>Google Keep Integration:</strong> Disconnected to prevent data invention[cite: 1].</li>
+            </ul>
+        </div>
+
+        <!-- Card 2: Financial & Budget -->
+        <div class="card">
+            <h2>2. Financial & Budget Briefing <span class="badge badge-red">Survival Mode</span></h2>
+            <p><strong>Total Schwab Cash:</strong> $812.77 USD (~2,535,643 COP)[cite: 1, 3]</p>
+            <ul>
+                <li><strong>Mask 6168 (Primary):</strong> $794.13 USD[cite: 1, 3]</li>
+                <li><strong>Mask 1171:</strong> $17.26 USD[cite: 1, 3]</li>
+                <li><strong>Mask 7868:</strong> $1.38 USD[cite: 1, 3]</li>
+            </ul>
+            <p style="margin-top: 10px;"><strong>Guardrails:</strong> Enforce $350 survival cap for Sep 16–30[cite: 1, 3]. Expected monthly income ~$4,158 USD[cite: 2, 3] requires strict same-day 50% savings sweep (~$2,079)[cite: 1, 3].</p>
+        </div>
+
+        <!-- Card 3: Rates & Markets -->
+        <div class="card">
+            <h2>3 & 4. FX Rates & Bitcoin</h2>
+            <ul>
+                <li><strong>USD to COP Live Rate:</strong> 1 USD ≈ 3,119.85 COP[cite: 1] (6-month forecast corridor: 3,050 – 3,150 COP[cite: 1]). Weekly cadence strictly enforced.</li>
+                <li><strong>Bitcoin (BTC):</strong> Trading at ~$75,700 USD (~237,067,698 COP)[cite: 1]. 6-month outlook indicates gradual recovery; hold allocations pending liquidity expansion[cite: 1, 3].</li>
+                <li><strong>Travel Advisory:</strong> Frontier IND → MDE baseline ~$191 USD[cite: 1, 3]. Purchases restricted on current cash floor[cite: 1, 3].</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <!-- Card 4: Gmail Triage -->
+        <div class="card full-width">
+            <h2>6. Gmail & Google Voice Operational Triage</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Source / Date</th>
+                        <th>Subject / Caller</th>
+                        <th>Summary / Action Required</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>VA Benefits</strong><br>Sep 16, 2026[cite: 1]</td>
+                        <td>Update on Document Processing[cite: 1]</td>
+                        <td>C-File & FOIA tracking logged; adjudicator assigned. No immediate action required[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Banks & Brower</strong><br>Sep 15, 2026[cite: 1]</td>
+                        <td>Retainer Receipt Confirmation[cite: 1]</td>
+                        <td>Acknowledgment of $5,000 retainer posting; case file active for discovery[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Binance Security</strong><br>Sep 14, 2026[cite: 1]</td>
+                        <td>Account Security & Password Reset[cite: 1]</td>
+                        <td>Secure confirmation link sent for credential recovery protocol[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Voice</strong><br>Sep 16, 2026[cite: 1]</td>
+                        <td>Mom (Jean Hays)[cite: 1]</td>
+                        <td>Checked in on schedule and Wakeman appointment slot confirmation. Flagged for callback[cite: 1].</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <!-- Card 5: AI Levers & Career Guidance -->
+        <div class="card">
+            <h2>11 & 12. AI Daily Levers & Career Roadmap</h2>
+            <ul>
+                <li><strong>Core Levers:</strong> Automated inbox triaging, reusable prompt libraries, structured markdown data extraction, and code debugging loops[cite: 1].</li>
+                <li><strong>Career Guidance (IT / USMC NCO / 0622):</strong> Master agentic workflow architecture, translate military operational discipline into technical SOP writing, and connect local RAG knowledge bases[cite: 1].</li>
+                <li><strong>Prompt Tip:</strong> Use <em>Role-Constraint Anchoring</em> to eliminate hallucinations[cite: 1].</li>
+            </ul>
+        </div>
+
+        <!-- Card 6: YouTube Trending -->
+        <div class="card">
+            <h2>13. YouTube Trending (US Technical Focus)</h2>
+            <ul>
+                <li><strong>Rank 1:</strong> Advanced Robotics Lab Testing Facilities (TechVision)[cite: 1]</li>
+                <li><strong>Rank 2:</strong> Building Custom AI Agents from Scratch in 20 Mins (CodeCraft)[cite: 1]</li>
+                <li><strong>Rank 5:</strong> Top 10 Cybersecurity Threats & Remote Infrastructure CVEs (CyberDefense Weekly)[cite: 1]</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        Ellie Assistant Protocol • Secure Localized Render • Zero Data Invention Rule Enforced[cite: 1]
+    </div>
+
+</body>
+</html>
+```[cite: 1]
+
+```
